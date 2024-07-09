@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    expose:
+      - 5432
+    environment:
+      POSTGRES_DB: imagestoredb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    # volumes:
+    #   - /E/Software/PostgreSQL/15/data/:/E/Software/PostgreSQL/15/data/
+    
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8200
+    ports:
+      - "8200:8200"
+    # environment:
+    #   DATABASE_URL: postgres://user:admin@imagestoredb:5432/imagestoredb
+    depends_on:
+      - db
+volumes:
+  db-data:

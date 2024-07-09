@@ -1,0 +1,17 @@
+Django==4.0.4
+djangorestframework==3.13.1
+djangorestframework_simplejwt==5.1.0
+pandas==1.4.1
+pytest==6.2.4
+requests==2.26.0
+SQLAlchemy==1.4.22
+sympy==1.9
+django-crispy-forms==1.14.0
+psycopg2-binary
+django-utils-six==2.0
+django-cors-headers==3.13.0
+django-extensions==3.2.1
+matplotlib==3.7.0
+CurrencyConverter==0.17.5
+django-cors-headers==4.3.0
+django-extensions==3.2.3
